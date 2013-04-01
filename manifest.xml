@@ -5,7 +5,7 @@
     <baseURL>http://s3.amazonaws.com/widgetgecko/apod/</baseURL>
     <name>Astronomy Picture of the Day</name>
     <description>A window into the majesty of the Universe with NASA's Astronomy Picture of the Day.</description>
-    <version>0.2.4</version>
+    <version>0.2.5</version>
   </widget>
   <style>
     <icons>
