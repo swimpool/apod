@@ -2,6 +2,8 @@ function ApodCtrl($scope, $http, Chameleon, version) {
 
   var bugsense = new Bugsense({ apiKey: '20491ba5', appversion: version });
 
+  // This has to be done like this or it doesn't work.
+  // I should probably figure out why at some point, but not right now.
   setTimeout(function () {
     Chameleon.init({ version: version });
   }, 1);
@@ -41,6 +43,7 @@ function ApodCtrl($scope, $http, Chameleon, version) {
         $scope.apod = data;
         $scope.apod.background = 'url("' + data.image + '")';
         $scope.$emit('chameleon.setTitle', 'APOD | ' + data.title);
+        $scope.$emit('chameleon.invalidate');
       })
       .error(function (data, status, headers, config) {
         bugsense.notify(new Error('Refresh Error'));

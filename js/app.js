@@ -1,1 +1,4 @@
-angular.module('apodWidget', [ 'widgetgecko.services', 'widget.services' ]);
+angular.module('apodWidget', [
+  'widgetgecko.services',
+  'widget.services'
+]);
